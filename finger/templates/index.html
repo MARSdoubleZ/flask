@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  
+  <script>
+	function dianLogin(){
+		$('#myModal').modal('show');
+	}
+  </script>
+ </head>
+ <body>
+ <div class="container">
+ {% include "head.html" %} 
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style='width:720px;'>
+            <div class="modal-header">
+				登陆/注册
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+				{% include "login.html" %}
+			</div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+ </body>
+</html>

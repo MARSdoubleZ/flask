@@ -1,0 +1,14 @@
+use figer
+db.admins.insert({'email':'admin','pwd':'admin',role:0})	/*管理员表*/
+
+db.users.ensureIndex({"email":1},{"unique":true,"name":"emailuiq"})
+db.users.ensureIndex({"tel":1},{"unique":true,"name":"teluiq"})
+db.users.ensureIndex({"nicheng":1},{"unique":true,"name":"nichenguiq"})
+
+/*店铺流水id表 */
+
+
+shopflow
+db.shopflow.insert({'flowid':0})
+
+db.shops.update({},{$set:{"flowid":0}},{multi:true})

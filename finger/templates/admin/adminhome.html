@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  
+  <script>
+	function dianLogin(){
+		$('#myModal').modal('show');
+	}
+  </script>
+ </head>
+ <body>
+ <div class="container">
+ {%include 'admin/adminHead.html'%}
+ 		<div id="table_body" class='row'>
+			<div id="ul_td_left" class="col-md-3 col-sm-3 col-xs-3">
+				{% include "admin/adminLeft.html" %}
+			</div>
+			<div class="col-md-1 col-sm-1 col-xs-1">
+			</div>
+			<div id='right_div' class="col-md-8 col-sm-8 col-xs-8">
+				<div>
+					这是右边的框
+				</div>	
+			</div>
+		</div>
+</div>
+</body>
+</html>
