@@ -1,0 +1,31 @@
+<!--pages/dish/orderdish/orderdish.wxml-->
+<view style='text-align:center'><text>{{shopname}}</text></view>
+<view class="mbox">  
+  <!--左侧栏-->  
+  <view class="nav_left">  
+    <block wx:for="{{navLeftItems}}"  wx:key=''>
+      <view class="nav_left_items {{curNav == item._id['$oid'] ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{item._id['$oid']}}">{{item.sortname}}</view>  
+    </block>  
+  </view>
+  <!--右侧栏-->  
+  <view class="nav_right">
+    <view wx:if="{{dishs}}">  
+        <block wx:for="{{dishs}}" wx:key=''>
+          <view class="nav_right_items">
+            <view>
+              <text style='color:blue;flex-grow:3'>{{item.dishname}}(￥{{item.price}})</text>
+            </view>
+            
+            <view style='display:flex'>
+              <image id='{{item._id["$oid"]}}' src='../../imgs/less.png' bindtap='lessDish'></image>
+                <text wx:if="{{dishnum[item._id['$oid']]}}">({{dishnum[item._id['$oid']]}})</text>         <text wx:else>(0)</text>
+              <image id='{{item._id["$oid"]}}' data-dname='{{item.dishname}}' data-price='{{item.price}}' src='../../imgs/add.png' bindtap='addDish'></image>
+            </view>
+
+          </view>
+        </block>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view>  
+  
+</view> 

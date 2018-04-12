@@ -1,0 +1,30 @@
+<!--pages/users/login/login.wxml-->
+<view class='vertical'>
+  <view style='height:1rem;'>
+    
+  </view>
+  <view class='body'>
+<form bindsubmit="onlogin">
+    <view class='loginView' style='text-align:center;'>
+        <text>登录</text>
+        <view class='row' style='margin-top:1rem;'>
+          <view>email:</view>
+          <view><input type='text' name='email'/></view>
+        </view>
+        <view class='row' style='margin-top:1rem;margin-bottom:1rem;'>
+          <view>密 码 :</view>
+          <view><input type='password' name='pwd'/></view>
+        </view>
+    </view>
+        <view>
+          <view><button formType="submit">登录</button></view>
+          <view><button style='margin-top:1rem;margin-bottom:1rem;'>注册</button></view>
+          <view>
+              <button bindtouchend='cancel'>取消</button>
+          </view>
+          <view><button style='margin-top:1rem;'>商家登录</button></view>
+        </view>
+  </form>
+  </view>
+  </view>
+

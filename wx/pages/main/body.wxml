@@ -1,0 +1,18 @@
+<view hidden="{{currentTab!==1}}">  
+  体育
+</view>
+  
+<!--我-->  
+<view hidden="{{currentTab!==2}}">  
+  周边
+</view>
+<view hidden='{{maphideflag}}'>
+  <map id="map" style="width: 100%; height:{{mapHeight}};" scale="17" show-location="true" longitude="{{longitude}}" latitude="{{latitude}}">
+  </map>
+  <view class="row">
+    <!-- <form bindsubmit="formSubmit"> -->
+      <input type="text" name="searchkey" placeholder="请输入地址" />
+      <!-- <button type="primary">搜索</button> -->
+    <!-- </form> -->
+  </view>
+</view>

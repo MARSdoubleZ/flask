@@ -1,0 +1,35 @@
+<view class='vertical'>
+	<view class='head'>
+    <!--导航条-->  
+      <view  class="navbar">  
+        <text class='col1' wx:for="{{navbar}}" data-idx="{{index}}"  class="item {{currentTab==index ? 'active' : ''}}" wx:key="index" bindtap="navbarTap">{{item}}   </text>
+      </view>
+  </view>
+  <!--进入餐厅-->
+      <view hidden="{{currentTab!==0}}">
+       <form bindsubmit="enterRestaurant"> 
+      <view class="row">
+          <view>
+          <input type="text" name="restaurantCode" placeholder="请输入餐厅编号" />
+          </view>
+          <view>
+           <button type="primary" formType="submit">进入</button>
+          </view>
+      </view>
+       </form> 
+      <text class='linka' bindtouchend='showmap'>{{linkaTxt}}</text>
+    </view>
+  <!--桌面-->
+	<view class='body'>
+    <include  src="body.wxml"/>
+    <view class='logindiv' hidden='true'>
+		  <include src="login.wxml" />
+    </view>
+	</view>
+  <!--底部导航-->
+	<view class='bottom'>
+		<text>首页</text>
+		<!-- <text style='color:blue' bindtouchend='showLogin'>登录</text> -->
+    <navigator url="../users/login/login">登录</navigator>
+	</view>
+</view>

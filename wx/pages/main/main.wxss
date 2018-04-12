@@ -1,0 +1,133 @@
+/* pages/main/main.wxss */
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+  width:100%;
+}
+
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+}  
+
+.navbar .item.active{  
+  color: #FFCC00;  
+} 
+
+.linka{
+  color: #0000ff;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+     /* margin-bottom: 0.1rem;  */
+    justify-content:center;
+}
+.row form{
+    margin:0 auto;
+}
+/* .row text{
+    flex-grow: 1;
+    text-align: right;
+} */
+.row input{
+    /* font-size: 0.9rem; */
+    color: #ccc;
+    /* flex-grow: 3; */
+    border: 1px solid #0099CC;
+    /* display: inline-block;  */
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.15rem #aaa;
+     padding: 0.3rem; 
+    /* width:12rem; */
+}
+.row button{
+    padding:0rpx;
+    width: 4rem;
+    height: 2rem;
+    display: inline-block;
+}
+
+/*--------------------------------------------------*/
+page{
+		height:100%;
+	}
+	.vertical{
+		/* border:1px solid blue; */
+		height:100%;
+		display: flex;
+		flex-direction:column;
+		justify-content:space-between;
+		/*align-content:space-between;*/
+	}
+	.row1{
+		/* border:1px solid green; */
+		/*height:20%;*/
+		 /* flex-grow:1;  */
+		display: flex;
+		flex-direction:row;
+		 justify-content:space-around; 
+	
+	}
+	.body{
+		border:1px solid red;
+		/*height:20%;*/
+		flex-grow:10;
+    display: flex;
+    flex-direction:column;
+   	justify-content:center;
+	}
+  .bottom{
+    flex-grow:0.6;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+
+  }
+	.col1{
+		/*border:1px solid yellow;*/
+		height:27%;
+		
+	}
+	.logindiv{
+		height:100%;
+		display: flex;
+		flex-direction:column; 
+		  /* justify-content:center;  */
+		align-items:center;   
+	}
+	.row3{
+		/* border:1px solid #ddff00; */
+		display: flex;
+		width:300px;
+    margin: 1rem;
+	}
+	.col3{
+		/* border:1px solid #00ddff; */
+    flex-grow:1;
+	}
+
+  .row3 input{
+    /* font-size: 0.9rem; */
+    /* color: #ccc; */
+    /* flex-grow: 3; */
+    border: 1px solid #0099CC;
+    display: inline-block; 
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.15rem #aaa;
+    padding: 0.3rem;
+    /* width:12rem; */
+    
+}
+.row3 button{
+    padding:0rpx;
+    width: 4rem;
+    height: 2rem;
+    display: inline-block;
+}
+/*--------------------------------------------------*/

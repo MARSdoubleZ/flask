@@ -1,0 +1,18 @@
+
+
+  <form>
+        <view class='row3'>
+          <view class='col3'>email:</view>
+          <view class='col3'><input type='text' name='email'/></view>
+        </view>
+        <view class='row3'>
+          <view class='col3'>密 码:</view>
+          <view class='col3'><input type='password' name='email'/></view>
+        </view>
+        <view class='row3'>
+          <view class='col3'><button>登录</button></view>
+          <view class='col3'><button>注册</button></view>
+          <view class='col3'><button>取消</button></view>
+        </view>
+  </form>
+

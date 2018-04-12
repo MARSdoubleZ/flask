@@ -1,0 +1,23 @@
+/* pages/users/login/login.wxss */
+.vertical{
+		display: flex;
+		flex-direction:column;
+	}
+.body{
+  display: flex;
+  justify-content:center;
+}
+.loginView{
+  width:100%;
+}
+
+.row{
+  display:flex;
+}
+.row input{
+  border: 1px solid #0099CC;
+  display: inline-block;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.15rem #aaa;
+  padding: 0.3rem;
+}

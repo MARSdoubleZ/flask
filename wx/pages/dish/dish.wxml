@@ -1,0 +1,45 @@
+<!--pages/dish/dish.wxml-->
+<view class='vertical'>
+  <view  class="navbar">  
+          <text class='col1' wx:for="{{navbar}}" data-idx="{{index}}"  class="item {{currentTab==index ? 'active' : ''}}" wx:key="index" bindtap="navbarTap">{{item}}   </text>
+  </view>
+  <view hidden="{{currentTab!==0}}" style='height:80%'>  
+    <orderDish id='od'></orderDish>
+  </view>
+  <view hidden="{{currentTab!==1}}"  style='height:80%'>  
+    购物车
+  </view>
+  <!--我-->  
+  <view hidden="{{currentTab!==2}}"  style='height:80%'>  
+    评论
+  </view>
+  <!--底部导航-->
+	<view class='bottom'>
+		<text  bindtouchend='showBuyCar'>购物车</text>
+    <text>总价：0元</text>
+	<navigator url="../users/login/login">去结算</navigator>
+	</view>
+</view>
+
+<view style='width:99%;height:100%;position:absolute;top:0rem;border:1px solid blue' hidden="{{buycarShow}}" bindtouchend='hidBuyCar'>
+  <view class='buycar' catchtouchend='dian'>
+  <view>
+      <text class='dname'>菜名</text>
+      <text class='dnum'>单价</text>
+      <text class='dnum'>数量</text>
+      <text style='width: 7rem;text-align:center'>操作</text>
+    </view>
+
+  
+  <view wx:for="{{goodsList}}" data-idx="{{index}}"  wx:key="index">
+      <text class='dname'>{{item[0]}}</text>
+      <text class='dnum'>{{item[1]}}</text>
+      <text class='dnum'>{{item[2]}}</text>
+      <view >
+            <image id='{{index}}' src='../imgs/less.png' bindtap='lessDish'></image>
+            <image id='{{index}}' src='../imgs/add.png' bindtap='addInCar'></image>
+      </view>
+  </view>
+  </view>
+ 
+</view>
